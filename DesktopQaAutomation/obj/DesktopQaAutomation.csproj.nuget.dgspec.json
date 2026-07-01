@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj": {}
+    "C:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj": {}
   },
   "projects": {
-    "D:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj": {
+    "C:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj",
+        "projectUniqueName": "C:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj",
         "projectName": "DesktopQaAutomation",
-        "projectPath": "D:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj",
-        "packagesPath": "C:\\Users\\KYC\\.nuget\\packages\\",
-        "outputPath": "D:\\psi_auto\\DesktopQaAutomation\\obj\\",
+        "projectPath": "C:\\psi_auto\\DesktopQaAutomation\\DesktopQaAutomation.csproj",
+        "packagesPath": "C:\\Users\\test2\\.nuget\\packages\\",
+        "outputPath": "C:\\psi_auto\\DesktopQaAutomation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KYC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\test2\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"

@@ -482,19 +482,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KYC\\.nuget\\packages\\": {}
+    "C:\\Users\\test2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\psi_auto\\MyAutomationDashboard\\server\\server.csproj",
+      "projectUniqueName": "C:\\psi_auto\\MyAutomationDashboard\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "D:\\psi_auto\\MyAutomationDashboard\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\KYC\\.nuget\\packages\\",
-      "outputPath": "D:\\psi_auto\\MyAutomationDashboard\\server\\obj\\",
+      "projectPath": "C:\\psi_auto\\MyAutomationDashboard\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\test2\\.nuget\\packages\\",
+      "outputPath": "C:\\psi_auto\\MyAutomationDashboard\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\KYC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\test2\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
