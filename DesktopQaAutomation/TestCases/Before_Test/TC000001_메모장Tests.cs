@@ -18,6 +18,7 @@ namespace DesktopQaAutomation.TestCases.Before_Test
     {
         private readonly AppFixture _fixture;
         private readonly string _tcId = "TC000001"; // 요청하신 규격으로 매칭
+        private readonly string _category = "Before_Test";
 
         // 생성자를 통해 SignalR 연결 상태를 공유받음
         public TC000001_메모장Tests(AppFixture fixture)
@@ -30,7 +31,7 @@ namespace DesktopQaAutomation.TestCases.Before_Test
         {
             if (_fixture.Connection != null && _fixture.Connection.State == HubConnectionState.Connected)
             {
-                _ = _fixture.Connection.InvokeAsync("SendTestStatus", _tcId, status, message);
+                _ = _fixture.Connection.InvokeAsync("SendTestStatus", _category, _tcId, status, message);
             }
         }
 

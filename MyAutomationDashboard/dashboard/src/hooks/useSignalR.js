@@ -12,17 +12,16 @@ export function useSignalR(hubUrl) {
       .build();
 
     connection.start()
-      .then(() => {
-        console.log("🟢 SignalR 연결 성공");
-        setIsConnected(true);
-      })
+      .then(() => setIsConnected(true))
       .catch(err => {
         console.error("🔴 연결 실패: ", err);
         setIsConnected(false);
       });
 
-    connection.on("ReceiveStatus", (testCaseId, status, message) => {
+    connection.on("ReceiveStatus", (category, testCaseId, status, message) => {
       const newLog = {
+        id: `${testCaseId}-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+        category: category || "Uncategorized",
         testCaseId,
         status: status.toUpperCase(),
         message,
@@ -31,16 +30,12 @@ export function useSignalR(hubUrl) {
       setLogs(prevLogs => [newLog, ...prevLogs]);
     });
 
-    // 재연결 이벤트 감지
     connection.onreconnecting(() => setIsConnected(false));
     connection.onreconnected(() => setIsConnected(true));
 
-    return () => {
-      connection.stop();
-    };
+    return () => connection.stop();
   }, [hubUrl]);
 
-  // 로그 초기화 기능도 함께 제공
   const clearLogs = () => setLogs([]);
 
   return { logs, isConnected, clearLogs };
