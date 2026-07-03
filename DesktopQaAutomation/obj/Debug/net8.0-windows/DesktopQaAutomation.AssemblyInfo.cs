@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesktopQaAutomation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7a05c63dfb6156f086f630259b78b6967c1948c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69d2ccf4a03fa66ee179f77a35eaaa4f4a90ee0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesktopQaAutomation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesktopQaAutomation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
