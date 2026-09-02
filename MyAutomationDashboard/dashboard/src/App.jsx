@@ -4,7 +4,7 @@ import { CategorySection } from './components/CategorySection';
 import { groupLogs } from './hooks/groupLogs';
 
 function App() {
-  const { logs, isConnected, clearLogs } = useSignalR("http://localhost:5000/testLogHub");
+  const { logs, isConnected, clearLogs } = useSignalR("/testLogHub");
   const [search, setSearch] = useState("");
 
   const grouped = useMemo(() => groupLogs(logs), [logs]);

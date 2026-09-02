@@ -2,27 +2,19 @@ using server.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. SignalR 서비스 등록
+// SignalR 서비스 등록
 builder.Services.AddSignalR();
-
-// 2. React(포트 5173 등)가 접근할 수 있도록 CORS 정책 허용
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("CorsPolicy", policy =>
-    {
-        policy.WithOrigins("http://localhost:5173") // Vite React 기본 포트
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials(); // SignalR 필수 설정
-    });
-});
 
 var app = builder.Build();
 
-app.UseCors("CorsPolicy");
+// React 빌드 결과물(wwwroot/) 정적 파일 서빙
+app.UseDefaultFiles();  // index.html을 기본 문서로 지정
+app.UseStaticFiles();   // wwwroot 폴더를 정적 파일 루트로 사용
 
-// 3. SignalR 주소(엔드포인트) 매핑
+// SignalR Hub 엔드포인트
 app.MapHub<TestLogHub>("/testLogHub");
 
-// 로컬 테스트를 위해 고정 포트(5000) 지정하여 서버 실행
-app.Run("http://0.0.0.0:5000");
+// SPA Fallback: API 경로 외의 모든 요청을 index.html로 처리 (React Router 대비)
+app.MapFallbackToFile("index.html");
+
+app.Run("http://0.0.0.0:5000");

@@ -18,7 +18,7 @@ namespace DesktopQaAutomation.Infrastructure
             Console.WriteLine("📡 대시보드 서버와 연결을 시도합니다...");
 
             Connection = new HubConnectionBuilder()
-                .WithUrl("https://proofread-prance-paramedic.ngrok-free.dev/testLogHub")
+                .WithUrl("http://localhost:5000/testLogHub")
                 .WithAutomaticReconnect()
                 .Build();
 
